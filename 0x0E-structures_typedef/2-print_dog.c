@@ -4,17 +4,20 @@
 /**
  * print_dog - function that prints a struct dog
  * @d: a variable of type struct dog
- *
- * Return: void
  */
 
 void print_dog(struct dog *d)
 {
 
-	if (d)
-	{
-		printf("Name: %s\n", d->name ? d->name : "(nil)");
-		printf("Age: %f\n", d->age);
-		printf("owner: %s\n", d->owner ? d->owner : "(nil)");
-	}
+	if (d == NULL)
+		return;
+
+	(d->name == NULL) ? printf("Name: (nil)\n")
+		: printf("Name: %s\n", d->name);
+
+	printf("Age: %f\n", d->age);
+
+	(d->owner == NULL) ? printf("Owner: (nil)\n")
+		: printf("Owner: %s\n", d->owner);
+
 }
