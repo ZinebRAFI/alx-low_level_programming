@@ -11,16 +11,16 @@
  */
 int main(int argc, char *argv[])
 {
-        char *p = (char *)main;
-        int j;
+	char *p = (char *)main;
+	int j;
 
-        if (argc != 2)
-                printf("Error\n"), exit(1);
-        j = atoi(argv[1]);
-        if (j < 0)
-                printf("Error\n"), exit(2);
+	if (argc != 2)
+		printf("Error\n"), exit(1);
+	j = atoi(argv[1]);
+	if (j < 0)
+		printf("Error\n"), exit(2);
 
-        while (j--)
-                printf("%02hhx%s", *p++, j ? " " : "\n");
-        return (0);
+	while (j--)
+		printf("%02hhx%s", *p++, j ? " " : "\n");
+	return (0);
 }
